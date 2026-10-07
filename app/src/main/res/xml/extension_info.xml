@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionInfo
+    displayName="@string/extension_name"
+    icon="@drawable/ic_pinion"
+    id="pinion">
+    <DataType
+        description="@string/gear_description"
+        displayName="@string/gear"
+        graphical="false"
+        icon="@drawable/ic_pinion"
+        typeId="gear" />
+    <DataType
+        description="@string/battery_description"
+        displayName="@string/battery"
+        graphical="false"
+        icon="@drawable/ic_pinion"
+        typeId="battery" />
+</ExtensionInfo>

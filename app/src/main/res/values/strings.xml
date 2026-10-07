@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pinion Smart.Shift</string>
+    <string name="extension_name">Pinion Smart.Shift</string>
+
+    <string name="gear">Pinion Gear</string>
+    <string name="gear_description">Current gear of the Pinion Smart.Shift gearbox</string>
+    <string name="battery">Pinion Battery</string>
+    <string name="battery_description">Battery level of the Pinion Smart.Shift gearbox (%)</string>
+
+    <string name="alert_disconnected_title">Pinion disconnected</string>
+    <string name="alert_disconnected_detail">Hold the rear shift button for 3 seconds to reconnect</string>
+
+    <string name="main_forget">Forget gearbox</string>
+    <string name="main_help">The gearbox only advertises after the rear shift button is held for 3 seconds. Do that once with this extension running and it connects by itself. After a dropped connection the gearbox stops advertising, so hold the button again.</string>
+</resources>
