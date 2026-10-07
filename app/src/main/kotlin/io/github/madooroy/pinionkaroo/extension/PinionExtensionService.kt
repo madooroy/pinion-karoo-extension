@@ -27,7 +27,7 @@ import timber.log.Timber
  * its pages, so riding another bike with another profile does not scan.
  * (Field streams cannot be used for this: Karoo keeps them running whatever profile is open.)
  */
-class PinionExtensionService : KarooExtension(EXTENSION_ID, "1.0") {
+class PinionExtensionService : KarooExtension(EXTENSION_ID, "0.1.0") {
     private lateinit var karooSystem: KarooSystemService
     private lateinit var client: PinionBleClient
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)

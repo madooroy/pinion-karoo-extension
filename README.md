@@ -35,12 +35,32 @@ The Karoo 3 is supported in the code (Android 13 permissions) but untested.
 - A Hammerhead Karoo 2 or Karoo 3.
 - A Pinion gearbox with a **Bluetooth-capable** Smart.Shift box (the kind that works with the Pinion
   Smart.Shift phone app). Boxes that talk to an e-bike system over CAN have no Bluetooth.
-- A computer with [Android Studio](https://developer.android.com/studio) and a USB cable, to build the
-  app and install it on the Karoo.
+- A computer and a USB cable, to install the app on the Karoo.
 
 ## Install
 
-There is no ready-made download yet, so the app is built from source.
+1. **Download the app.** Get `pinion-karoo-extension-<version>.apk` from the
+   [latest release](https://github.com/madooroy/pinion-karoo-extension/releases).
+
+2. **Switch on USB debugging on the Karoo:** *Settings > About*, tap *Build number* until developer mode
+   is on, then *Settings > Developer options > USB debugging*. Connect the Karoo to a computer by USB
+   and allow debugging when it asks.
+
+3. **Install it** with [adb](https://developer.android.com/tools/releases/platform-tools) from the
+   computer:
+
+   ```
+   adb install -r pinion-karoo-extension-<version>.apk
+   ```
+
+4. **Open *Pinion Smart.Shift* on the Karoo once** and allow the permission it asks for.
+
+5. **Add the fields.** Edit a ride profile on the Karoo, add a data field and pick **Pinion Gear** (and
+   **Pinion Battery**) from the *Pinion Smart.Shift* section.
+
+### Building it yourself
+
+You need [Android Studio](https://developer.android.com/studio).
 
 1. **Get a GitHub token for the Karoo library.** karoo-ext is hosted on GitHub Packages, which needs a
    token even for public packages. On GitHub go to *Settings > Developer settings > Personal access
@@ -56,18 +76,8 @@ There is no ready-made download yet, so the app is built from source.
 2. **Open the project in Android Studio** and let the Gradle sync finish. Decline any offer to upgrade
    the Android Gradle Plugin.
 
-3. **Switch on USB debugging on the Karoo:** *Settings > About*, tap *Build number* until developer mode
-   is on, then *Settings > Developer options > USB debugging*. Connect the Karoo by USB and allow
-   debugging when it asks.
-
-4. **Press Run** in Android Studio with the Karoo selected as the device. The app installs and opens on
-   the Karoo; allow the permission it asks for.
-
-   From a command line the same is `./gradlew assembleDebug` followed by
-   `adb install -r app/build/outputs/apk/debug/app-debug.apk`.
-
-5. **Add the fields.** Edit a ride profile on the Karoo, add a data field and pick **Pinion Gear** (and
-   **Pinion Battery**) from the *Pinion Smart.Shift* section.
+3. **Press Run** with the Karoo connected and selected as the device, or from a command line run
+   `./gradlew assembleDebug` and install `app/build/outputs/apk/debug/app-debug.apk` with adb.
 
 ## Use
 
